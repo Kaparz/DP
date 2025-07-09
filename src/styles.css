@@ -1,0 +1,167 @@
+/* ==========================================================
+   ===  БАЗОВЫЙ СБРОС  ====================================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+html,body{
+  width:100%;
+  height:100%;
+  background:#f8f9fa;
+  color:#333;
+}
+
+/* ==========================================================
+   ===  NAVBAR / КОНТЕЙНЕР  ================================= */
+.container{display:flex;flex-direction:column;height:100vh;}
+
+.navbar{
+  background:#343a40;
+  color:#fff;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.navbar .page-title{font-size:20px;font-weight:700;}
+.navbar-links{list-style:none;display:flex;gap:20px;}
+.navbar-links a{color:#fff;text-decoration:none;font-weight:500;}
+
+.content{flex:1;padding:20px;overflow-y:auto;}
+
+/* ==========================================================
+   ===  DASHBOARD  ========================================= */
+.dashboard{max-width:900px;margin:0 auto;}
+.dash-title{font-size:28px;font-weight:600;margin:10px 0 25px;color:#0d6efd;}
+.card{
+  background:#fff;
+  padding:18px 22px;
+  border-radius:10px;
+  box-shadow:0 1px 6px rgba(0,0,0,.08);
+  margin-bottom:20px;
+}
+.card h3{margin-bottom:12px;font-size:18px;color:#495057;}
+.link-card a{color:#0d6efd;font-weight:600;text-decoration:none;}
+
+/* ==========================================================
+   ===  PROJECTS (старый список)  =========================== */
+.projects-page{max-width:900px;margin:0 auto;}
+.header-line{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+.btn{
+  background:#0d6efd;color:#fff;padding:7px 16px;border-radius:6px;text-decoration:none;
+  font-size:15px;transition:background .2s;
+}
+.btn:hover{background:#0b5ed7;}
+.projects-list{list-style:none;padding:0;}
+.project-item{margin:8px 0;font-size:16px;}
+.project-item a{color:#0d6efd;text-decoration:none;font-weight:500;}
+.project-item a:hover{text-decoration:underline;}
+.project-item .sub{color:#6c757d;font-size:14px;}
+
+/* ==========================================================
+   ===  PROJECTS — новая сетка-плитка  ====================== */
+.projects-wrapper{max-width:1100px;margin:0 auto;}
+.proj-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
+.proj-actions{display:flex;gap:10px;}
+.proj-search{
+  padding:7px 10px;
+  border:1px solid #ced4da;
+  border-radius:6px;
+  min-width:180px;
+}
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:20px;
+}
+.proj-card{
+  background:#fff;
+  padding:18px 20px;
+  border-radius:10px;
+  box-shadow:0 1px 6px rgba(0,0,0,.08);
+  text-decoration:none;
+  color:#333;
+  transition:transform .15s,box-shadow .15s;
+}
+.proj-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+.proj-card h3{font-size:18px;color:#0d6efd;margin-bottom:8px;}
+.proj-card .descr{font-size:14px;color:#495057;margin-bottom:12px;min-height:44px;}
+.meta{display:flex;justify-content:space-between;font-size:13px;color:#6c757d;}
+
+/* ==========================================================
+   ===  KANBAN BOARD  ======================================= */
+.kanban-board{
+  display:flex;gap:20px;align-items:flex-start;overflow-x:auto;padding:10px;
+}
+.kanban-column{
+  background:#e9ecef;border-radius:10px;padding:15px;width:300px;flex-shrink:0;
+}
+.kanban-column h3{font-size:18px;margin-bottom:10px;color:#495057;}
+.kanban-card{
+  background:#fff;border:1px solid #ced4da;border-left:5px solid #0d6efd;
+  border-radius:6px;padding:10px;margin-bottom:10px;
+}
+.kanban-card h4{font-size:16px;margin-bottom:5px;}
+.kanban-card p{font-size:14px;color:#495057;}
+
+/* ==========================================================
+   ===  TASK FORM  ========================================== */
+.task-form{
+  margin-bottom:20px;padding:15px;background:#fff;border-radius:8px;
+  box-shadow:0 1px 5px rgba(0,0,0,.1);
+}
+.task-form h3{margin-bottom:10px;font-size:18px;color:#0d6efd;}
+.task-form input,
+.task-form textarea,
+.task-form select{
+  width:100%;margin-bottom:10px;padding:8px;border:1px solid #ced4da;border-radius:4px;
+}
+.task-form button{
+  background:#0d6efd;color:#fff;border:none;padding:8px 14px;border-radius:5px;
+  cursor:pointer;transition:background .2s;
+}
+.task-form button:hover{background:#0b5ed7;}
+
+/* ==========================================================
+   ===  AUTH FORM  ========================================== */
+.auth-form{
+  max-width:350px;margin:80px auto;padding:20px;background:#fff;border-radius:8px;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+.auth-form h2{margin-bottom:15px;color:#0d6efd;}
+.auth-form input{
+  width:100%;padding:10px;margin-bottom:12px;border-radius:5px;border:1px solid #ced4da;
+}
+.auth-form button{
+  width:100%;background:#0d6efd;color:#fff;padding:10px;border:none;border-radius:5px;
+  font-size:16px;transition:background .2s;
+}
+.auth-form button:hover{background:#0b5ed7;}
+.auth-form .error{color:red;font-size:14px;margin-bottom:10px;text-align:center;}
+
+/* ==========================================================
+   ===  NOTIFICATIONS  ====================================== */
+.notifications{
+  position:fixed;bottom:20px;left:20px;background:#fff;border-left:5px solid #dc3545;
+  padding:12px;border-radius:6px;box-shadow:0 1px 8px rgba(0,0,0,.15);
+}
+.notifications ul{list-style:none;padding:0;margin:0;}
+.notifications li{margin-bottom:5px;font-size:14px;}
+.notifications button{background:none;border:none;color:#dc3545;cursor:pointer;}
+
+.stat-card li { display:flex; align-items:center; gap:6px; margin:4px 0; }
+
+.dot{
+  width:10px;height:10px;border-radius:50%;display:inline-block;
+}
+
+.dot.todo       { background:#6c757d; }   /* серый */
+.dot.inprogress { background:#0d6efd; }   /* синий */
+.dot.pause      { background:#ffc107; }   /* жёлтый */
+.dot.review     { background:#6610f2; }   /* фиолетовый */
+.dot.done       { background:#28a745; }   /* зелёный */
